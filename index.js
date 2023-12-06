@@ -119,5 +119,20 @@ for(var i = 1; i < finances.length; i ++ ){
 console.log(average);
 
 
+// The greatest increase in profits (date and difference in the amounts) over the entire period.
+
+var greatestIncrease = 0;
+var greatestDay = "";
+
+for (i = 0; i < finances.length - 1; i++) {
+  var financesRow = finances[i][1];
+  if (greatestIncrease < finances[i][1]) {
+      greatestIncrease = finances[i][1];
+      greatestDate = finances[i]
+  }
+}
+
+console.log(greatestDate);
+
 
 
