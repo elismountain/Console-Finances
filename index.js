@@ -134,5 +134,20 @@ for (i = 0; i < finances.length - 1; i++) {
 
 console.log(greatestDate);
 
+// The greatest decrease in losses (date and difference in the amounts) over the entire period.
+
+
+var greatestDecrease = 0;
+var worstDay = "";
+
+for ( i = 0; i < finances.length - 1; i ++ ) {
+  var financesRow = finances[i][1];
+  if (greatestDecrease > finances[i][1]) {
+    greatestDecrease = finances[i][1];
+    worstDay = finances[i]
+  }
+}
+
+console.log(worstDay);
 
 
