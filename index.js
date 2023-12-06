@@ -86,3 +86,68 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+// The total number of months included in the dataset.
+
+console.log(finances);
+
+var totalMonth = finances.length;
+
+console.log("Total months: " + totalMonth);
+
+// The net total amount of Profit/Losses over the entire period.
+
+var netProfit = 0;
+
+for(var i = 0;  i < finances.length; i ++ ) {
+  netProfit += finances[i][1];
+} 
+console.log("Net total amount of Profit/Losses over the entire period: $" + netProfit);
+
+// The average of the changes in Profit/Losses over the entire period.
+
+var change = 0;
+
+for(var i = 1; i < finances.length; i ++ ){
+  var periodChange = finances[i][1] - finances[i - 1][1];
+  change = periodChange;
+  var average = change / (finances.length - 1);
+  average = average.toFixed(2);
+}
+
+console.log("Average Change: $" + average);
+
+
+// The greatest increase in profits (date and difference in the amounts) over the entire period.
+
+var greatestIncrease = 0;
+var greatestDay = "";
+
+for (i = 0; i < finances.length - 1; i++) {
+  var financesRow = finances[i][1];
+  if (greatestIncrease < finances[i][1]) {
+      greatestIncrease = finances[i][1];
+      greatestDate = finances[i]
+  }
+}
+
+console.log("Greatest Increase in Profits: " + greatestDate);
+
+// The greatest decrease in losses (date and difference in the amounts) over the entire period.
+
+
+var greatestDecrease = 0;
+var worstDay = "";
+
+for ( i = 0; i < finances.length - 1; i ++ ) {
+  var financesRow = finances[i][1];
+  if (greatestDecrease > finances[i][1]) {
+    greatestDecrease = finances[i][1];
+    worstDay = finances[i]
+  }
+}
+
+console.log("Greatest Decrease in Profits: " + worstDay);
+
+
