@@ -110,8 +110,8 @@ console.log("Net total amount of Profit/Losses over the entire period: $" + netP
 var change = 0;
 
 for(var i = 1; i < finances.length; i ++ ){
-  var period = finances[i][1] - finances[i - 1][1];
-  change = period;
+  var periodChange = finances[i][1] - finances[i - 1][1];
+  change = periodChange;
   var average = change / (finances.length - 1);
   average = average.toFixed(2);
 }
