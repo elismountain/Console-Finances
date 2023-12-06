@@ -94,7 +94,7 @@ console.log(finances);
 
 var totalMonth = finances.length;
 
-console.log(totalMonth);
+console.log("Total months: " + totalMonth);
 
 // The net total amount of Profit/Losses over the entire period.
 
@@ -103,7 +103,7 @@ var netProfit = 0;
 for(var i = 0;  i < finances.length; i ++ ) {
   netProfit += finances[i][1];
 } 
-console.log(netProfit);
+console.log("Net total amount of Profit/Losses over the entire period: $" + netProfit);
 
 // The average of the changes in Profit/Losses over the entire period.
 
@@ -116,7 +116,7 @@ for(var i = 1; i < finances.length; i ++ ){
   average = average.toFixed(2);
 }
 
-console.log(average);
+console.log("Average Change: $" + average);
 
 
 // The greatest increase in profits (date and difference in the amounts) over the entire period.
@@ -132,7 +132,7 @@ for (i = 0; i < finances.length - 1; i++) {
   }
 }
 
-console.log(greatestDate);
+console.log("Greatest Increase in Profits: " + greatestDate);
 
 // The greatest decrease in losses (date and difference in the amounts) over the entire period.
 
@@ -148,6 +148,6 @@ for ( i = 0; i < finances.length - 1; i ++ ) {
   }
 }
 
-console.log(worstDay);
+console.log("Greatest Decrease in Profits: " + worstDay);
 
 
